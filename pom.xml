@@ -12,6 +12,8 @@
         <module>Monster-Bom</module>
         <module>dingtalk-sdk</module>
         <module>monster-core-auto</module>
+        <module>monster-core-boot</module>
+        <module>monster-core-tool</module>
     </modules>
 
     <properties>
@@ -29,8 +31,8 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>com.kte.platform</groupId>
-                <artifactId>kte-bom</artifactId>
+                <groupId>com.monster.platform</groupId>
+                <artifactId>Monster-Bom</artifactId>
                 <version>${project.version}</version>
                 <type>pom</type>
                 <scope>import</scope>

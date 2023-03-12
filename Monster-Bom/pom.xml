@@ -10,7 +10,7 @@
         <relativePath/>
     </parent>
 
-    <groupId>com.monster</groupId>
+    <groupId>com.monster.platform</groupId>
     <packaging>pom</packaging>
     <artifactId>Monster-Bom</artifactId>
     <version>1.0-SNAPSHOT</version>
@@ -45,8 +45,8 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>com.kte</groupId>
-                <artifactId>kte-core-auto</artifactId>
+                <groupId>com.monster</groupId>
+                <artifactId>monster-core-auto</artifactId>
                 <version>1.0-SNAPSHOT</version>
                 <scope>provided</scope>
             </dependency>
