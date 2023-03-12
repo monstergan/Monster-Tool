@@ -11,6 +11,7 @@
     <modules>
         <module>Monster-Bom</module>
         <module>dingtalk-sdk</module>
+        <module>monster-core-auto</module>
     </modules>
 
     <properties>
