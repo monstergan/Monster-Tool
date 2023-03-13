@@ -1,5 +1,6 @@
 package com.monster.core.tool.utils;
 
+import com.monster.core.tool.tuple.KeyPair;
 import org.springframework.lang.Nullable;
 import org.springframework.util.Base64Utils;
 import org.springframework.util.StringUtils;

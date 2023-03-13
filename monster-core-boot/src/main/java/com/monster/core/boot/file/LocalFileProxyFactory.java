@@ -1,11 +1,12 @@
 package com.monster.core.boot.file;
 
 
-import com.kte.core.boot.props.KteFileProperties;
+
 import com.kte.core.tool.utils.DateUtil;
 import com.kte.core.tool.utils.ImageUtil;
 import com.kte.core.tool.utils.SpringUtil;
 import com.kte.core.tool.utils.StringPool;
+import com.monster.core.boot.props.MonsterFileProperties;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -19,11 +20,11 @@ public class LocalFileProxyFactory implements IFileProxy {
 	/**
 	 * 文件配置
 	 */
-	private static KteFileProperties fileProperties;
+	private static MonsterFileProperties fileProperties;
 
-	private static KteFileProperties getKteFileProperties() {
+	private static MonsterFileProperties getMonsterFileProperties() {
 		if (fileProperties == null) {
-			fileProperties = SpringUtil.getBean(KteFileProperties.class);
+			fileProperties = SpringUtil.getBean(MonsterFileProperties.class);
 		}
 		return fileProperties;
 	}
@@ -70,12 +71,12 @@ public class LocalFileProxyFactory implements IFileProxy {
 		long time = System.nanoTime();
 
 		StringBuilder uploadPath = new StringBuilder()
-			.append(getFileDir(dir, getKteFileProperties().getUploadRealPath()))
+			.append(getFileDir(dir, getMonsterFileProperties().getUploadRealPath()))
 			.append(time)
 			.append(getFileExt(f.getName()));
 
 		StringBuilder virtualPath = new StringBuilder()
-			.append(getFileDir(dir, getKteFileProperties().getUploadCtxPath()))
+			.append(getFileDir(dir, getMonsterFileProperties().getUploadCtxPath()))
 			.append(time)
 			.append(getFileExt(f.getName()));
 
@@ -90,7 +91,7 @@ public class LocalFileProxyFactory implements IFileProxy {
 	@Override
 	public void compress(String path) {
 		try {
-			ImageUtil.zoomScale(ImageUtil.readImage(path), new FileOutputStream(new File(path)), null, getKteFileProperties().getCompressScale(), getKteFileProperties().getCompressFlag());
+			ImageUtil.zoomScale(ImageUtil.readImage(path), new FileOutputStream(new File(path)), null, getMonsterFileProperties().getCompressScale(), getMonsterFileProperties().getCompressFlag());
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}

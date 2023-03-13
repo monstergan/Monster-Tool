@@ -1,9 +1,9 @@
 package com.monster.core.boot.file;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.kte.core.boot.props.KteFileProperties;
 import com.kte.core.tool.utils.DateUtil;
 import com.kte.core.tool.utils.SpringUtil;
+import com.monster.core.boot.props.MonsterFileProperties;
 import lombok.Data;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -18,7 +18,7 @@ public class LocalFile {
 	/**
 	 * 文件配置
 	 */
-	private static KteFileProperties fileProperties;
+	private static MonsterFileProperties fileProperties;
 	/**
 	 * 上传文件在附件表中的id
 	 */
@@ -58,9 +58,9 @@ public class LocalFile {
 		this.file = file;
 		this.fileName = file.getName();
 		this.originalFileName = file.getOriginalFilename();
-		this.domain = getKteFileProperties().getUploadDomain();
-		this.uploadPath = KteFileUtil.formatUrl(File.separator + getKteFileProperties().getUploadRealPath() + File.separator + dir + File.separator + DateUtil.format(DateUtil.now(), "yyyyMMdd") + File.separator + this.originalFileName);
-		this.uploadVirtualPath = KteFileUtil.formatUrl(getKteFileProperties().getUploadCtxPath().replace(getKteFileProperties().getContextPath(), "") + File.separator + dir + File.separator + DateUtil.format(DateUtil.now(), "yyyyMMdd") + File.separator + this.originalFileName);
+		this.domain = getMonsterFileProperties().getUploadDomain();
+		this.uploadPath = KteFileUtil.formatUrl(File.separator + getMonsterFileProperties().getUploadRealPath() + File.separator + dir + File.separator + DateUtil.format(DateUtil.now(), "yyyyMMdd") + File.separator + this.originalFileName);
+		this.uploadVirtualPath = KteFileUtil.formatUrl(getMonsterFileProperties().getUploadCtxPath().replace(getMonsterFileProperties().getContextPath(), "") + File.separator + dir + File.separator + DateUtil.format(DateUtil.now(), "yyyyMMdd") + File.separator + this.originalFileName);
 	}
 
 	public LocalFile(MultipartFile file, String dir, String uploadPath, String uploadVirtualPath) {
@@ -71,9 +71,9 @@ public class LocalFile {
 		}
 	}
 
-	private static KteFileProperties getKteFileProperties() {
+	private static MonsterFileProperties getMonsterFileProperties() {
 		if (fileProperties == null) {
-			fileProperties = SpringUtil.getBean(KteFileProperties.class);
+			fileProperties = SpringUtil.getBean(MonsterFileProperties.class);
 		}
 		return fileProperties;
 	}
@@ -82,7 +82,7 @@ public class LocalFile {
 	 * 图片上传
 	 */
 	public void transfer() {
-		transfer(getKteFileProperties().getCompress());
+		transfer(getMonsterFileProperties().getCompress());
 	}
 
 	/**

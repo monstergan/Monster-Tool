@@ -1,6 +1,8 @@
 package com.monster.core.launch.config;
 
 
+import com.monster.core.launch.props.MonsterProperties;
+import com.monster.core.launch.props.MonsterPropertySourcePostProcessor;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -15,11 +17,10 @@ import org.springframework.core.annotation.Order;
  */
 @Configuration(proxyBeanMethods = false)
 @Order(Ordered.HIGHEST_PRECEDENCE)
-@EnableConfigurationProperties(KteProperties.class)
+@EnableConfigurationProperties(MonsterProperties.class)
 public class MonsterPropertyConfiguration {
     @Bean
-    public MonsterPropertySourcePostProcessor ktePropertySourcePostProcessor() {
+    public MonsterPropertySourcePostProcessor monsterPropertySourcePostProcessor() {
         return new MonsterPropertySourcePostProcessor();
     }
-
 }

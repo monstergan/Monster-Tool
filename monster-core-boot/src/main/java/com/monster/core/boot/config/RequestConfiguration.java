@@ -1,9 +1,9 @@
 package com.monster.core.boot.config;
 
 
-import com.kte.core.boot.request.KteRequestFilter;
-import com.kte.core.boot.request.RequestProperties;
-import com.kte.core.boot.request.XssProperties;
+import com.monster.core.boot.request.MonsterRequestFilter;
+import com.monster.core.boot.request.RequestProperties;
+import com.monster.core.boot.request.XssProperties;
 import lombok.AllArgsConstructor;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
@@ -31,12 +31,12 @@ public class RequestConfiguration {
      * 全局过滤器
      */
     @Bean
-    public FilterRegistrationBean<KteRequestFilter> kteFilterRegistration() {
-        FilterRegistrationBean<KteRequestFilter> registration = new FilterRegistrationBean<>();
+    public FilterRegistrationBean<MonsterRequestFilter> kteFilterRegistration() {
+        FilterRegistrationBean<MonsterRequestFilter> registration = new FilterRegistrationBean<>();
         registration.setDispatcherTypes(DispatcherType.REQUEST);
-        registration.setFilter(new KteRequestFilter(requestProperties, xssProperties));
+        registration.setFilter(new MonsterRequestFilter(requestProperties, xssProperties));
         registration.addUrlPatterns("/*");
-        registration.setName("kteRequestFilter");
+        registration.setName("MonsterRequestFilter");
         registration.setOrder(Ordered.LOWEST_PRECEDENCE);
         return registration;
     }

@@ -1,11 +1,13 @@
 package com.monster.core.tool.utils;
 
 
+import com.monster.core.tool.beans.BeanProperty;
 import com.monster.core.tool.beans.MonsterBeanCopier;
+import com.monster.core.tool.beans.MonsterBeanMap;
+import com.monster.core.tool.convert.MonsterConverter;
 import org.springframework.beans.BeanWrapper;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.PropertyAccessorFactory;
-import org.springframework.cglib.beans.BeanCopier;
 import org.springframework.cglib.beans.BeanGenerator;
 import org.springframework.lang.Nullable;
 
@@ -252,7 +254,7 @@ public class BeanUtil extends org.springframework.beans.BeanUtils {
         }
         MonsterBeanCopier copier = MonsterBeanCopier.create(sourceClazz, targetClazz, true);
         T to = newInstance(targetClazz);
-        copier.copy(source, to, new KteConverter(sourceClazz, targetClazz));
+        copier.copy(source, to, new MonsterConverter(sourceClazz, targetClazz));
         return to;
     }
 
@@ -349,7 +351,7 @@ public class BeanUtil extends org.springframework.beans.BeanUtils {
         if (bean == null) {
             return new HashMap<>(0);
         }
-        return KteBeanMap.create(bean);
+        return MonsterBeanMap.create(bean);
     }
 
     /**

@@ -1,8 +1,8 @@
 package com.monster.core.boot.config;
 
 
-import com.kte.core.boot.error.ErrorType;
-import com.kte.core.boot.error.ErrorUtil;
+import com.monster.core.boot.error.ErrorType;
+import com.monster.core.boot.error.ErrorUtil;
 import com.kte.core.context.KteContext;
 import com.kte.core.context.KteRunnableWrapper;
 import com.kte.core.launch.props.KteProperties;

@@ -1,8 +1,8 @@
 package com.monster.core.boot.config;
 
-import com.kte.core.boot.props.KteFileProperties;
-import com.kte.core.boot.props.KteUploadProperties;
-import com.kte.core.boot.resolver.TokenArgumentResolver;
+import com.monster.core.boot.props.MonsterFileProperties;
+import com.monster.core.boot.props.MonsterUploadProperties;
+import com.monster.core.boot.resolver.TokenArgumentResolver;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
@@ -27,15 +27,15 @@ import java.util.List;
 @Order(Ordered.HIGHEST_PRECEDENCE)
 @AllArgsConstructor
 @EnableConfigurationProperties({
-	KteUploadProperties.class, KteFileProperties.class
+	MonsterUploadProperties.class, MonsterFileProperties.class
 })
 public class MonsterWebMvcConfiguration implements WebMvcConfigurer {
 
-	private final KteUploadProperties kteUploadProperties;
+	private final MonsterUploadProperties MonsterUploadProperties;
 
 	@Override
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
-		String path = kteUploadProperties.getSavePath();
+		String path = MonsterUploadProperties.getSavePath();
 		registry.addResourceHandler("/upload/**")
 			.addResourceLocations("file:" + path + "/upload/");
 	}
