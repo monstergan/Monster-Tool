@@ -26,8 +26,8 @@
             <artifactId>kte-core-secure</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.kte</groupId>
-            <artifactId>kte-core-cloud</artifactId>
+            <groupId>com.monster</groupId>
+            <artifactId>monster-core-cloud</artifactId>
         </dependency>
         <dependency>
             <groupId>com.kte</groupId>
