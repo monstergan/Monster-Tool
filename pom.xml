@@ -15,6 +15,7 @@
         <module>monster-core-boot</module>
         <module>monster-core-tool</module>
         <module>monster-core-launch</module>
+        <module>monster-core-cloud</module>
     </modules>
 
     <properties>
