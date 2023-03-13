@@ -1,6 +1,6 @@
 package com.monster.core.tool.config;
 
-import com.kte.core.tool.support.BinderSupplier;
+import com.monster.core.tool.support.BinderSupplier;
 import com.monster.core.tool.utils.SpringUtil;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.annotation.Bean;

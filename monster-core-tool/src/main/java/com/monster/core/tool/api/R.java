@@ -1,7 +1,7 @@
 package com.monster.core.tool.api;
 
-import com.kte.core.tool.constant.KteConstant;
-import com.kte.core.tool.utils.ObjectUtil;
+import com.monster.core.tool.constant.MonsterConstant;
+import com.monster.core.tool.utils.ObjectUtil;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Getter;
@@ -90,7 +90,7 @@ public class R<T> implements Serializable {
 	 * @return R
 	 */
 	public static <T> R<T> data(T data) {
-		return data(data, KteConstant.DEFAULT_SUCCESS_MESSAGE);
+		return data(data, MonsterConstant.DEFAULT_SUCCESS_MESSAGE);
 	}
 
 	/**
@@ -115,7 +115,7 @@ public class R<T> implements Serializable {
 	 * @return R
 	 */
 	public static <T> R<T> data(int code, T data, String msg) {
-		return new R<>(code, data, data == null ? KteConstant.DEFAULT_NULL_MESSAGE : msg);
+		return new R<>(code, data, data == null ? MonsterConstant.DEFAULT_NULL_MESSAGE : msg);
 	}
 
 	/**
@@ -206,7 +206,7 @@ public class R<T> implements Serializable {
 	 * @return R
 	 */
 	public static <T> R<T> status(boolean flag) {
-		return flag ? success(KteConstant.DEFAULT_SUCCESS_MESSAGE) : fail(KteConstant.DEFAULT_FAILURE_MESSAGE);
+		return flag ? success(MonsterConstant.DEFAULT_SUCCESS_MESSAGE) : fail(MonsterConstant.DEFAULT_FAILURE_MESSAGE);
 	}
 
 }

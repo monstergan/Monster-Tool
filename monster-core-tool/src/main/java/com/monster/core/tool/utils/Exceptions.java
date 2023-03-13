@@ -1,6 +1,6 @@
 package com.monster.core.tool.utils;
 
-import com.kte.core.tool.support.FastStringWriter;
+import com.monster.core.tool.support.FastStringWriter;
 
 import java.io.PrintWriter;
 import java.lang.reflect.InvocationTargetException;
