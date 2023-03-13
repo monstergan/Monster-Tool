@@ -1,6 +1,6 @@
 package com.monster.core.tool.utils;
 
-import com.kte.core.tool.function.*;
+import com.monster.core.tool.function.*;
 
 import java.util.Comparator;
 import java.util.Objects;

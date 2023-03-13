@@ -1,6 +1,6 @@
 package com.monster.core.tool.utils;
 
-import com.kte.core.tool.support.StrSpliter;
+import com.monster.core.tool.support.StrSpliter;
 import org.springframework.lang.Nullable;
 import org.springframework.util.Assert;
 import org.springframework.util.PatternMatchUtils;

@@ -1,7 +1,7 @@
 package com.monster.core.tool.utils;
 
-import com.kte.core.tool.support.IMultiOutputStream;
-import com.kte.core.tool.support.ImagePosition;
+import com.monster.core.tool.support.IMultiOutputStream;
+import com.monster.core.tool.support.ImagePosition;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
