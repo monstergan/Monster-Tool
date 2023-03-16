@@ -81,8 +81,8 @@
             </dependency>
 
             <dependency>
-                <groupId>com.kte</groupId>
-                <artifactId>kte-core-context</artifactId>
+                <groupId>com.monster</groupId>
+                <artifactId>monster-core-context</artifactId>
                 <version>1.0-SNAPSHOT</version>
             </dependency>
 
@@ -93,8 +93,8 @@
             </dependency>
 
             <dependency>
-                <groupId>com.kte</groupId>
-                <artifactId>kte-core-tool</artifactId>
+                <groupId>com.monster</groupId>
+                <artifactId>monster-core-tool</artifactId>
                 <version>1.0-SNAPSHOT</version>
             </dependency>
 
