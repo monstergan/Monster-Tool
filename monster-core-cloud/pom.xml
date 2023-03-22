@@ -15,8 +15,8 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.kte</groupId>
-            <artifactId>kte-core-context</artifactId>
+            <groupId>com.monster</groupId>
+            <artifactId>monster-core-context</artifactId>
         </dependency>
 
         <dependency>

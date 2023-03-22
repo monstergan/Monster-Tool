@@ -1,6 +1,6 @@
 package com.monster.core.cloud.hystrix;
 
-import com.kte.core.context.KteCallableWrapper;
+import com.monster.core.context.MonsterCallableWrapper;
 import com.netflix.hystrix.HystrixThreadPoolKey;
 import com.netflix.hystrix.HystrixThreadPoolProperties;
 import com.netflix.hystrix.strategy.concurrency.HystrixConcurrencyStrategy;
@@ -58,7 +58,7 @@ public class MonsterHystrixConcurrencyStrategy extends HystrixConcurrencyStrateg
 
     @Override
     public <T> Callable<T> wrapCallable(Callable<T> callable) {
-        Callable<T> wrapCallable = new KteCallableWrapper<>(callable);
+        Callable<T> wrapCallable = new MonsterCallableWrapper<>(callable);
         return existingConcurrencyStrategy != null
                 ? existingConcurrencyStrategy.wrapCallable(wrapCallable)
                 : super.wrapCallable(wrapCallable);

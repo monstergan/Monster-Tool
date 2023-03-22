@@ -17,6 +17,7 @@
         <module>monster-core-launch</module>
         <module>monster-core-cloud</module>
         <module>monster-core-context</module>
+        <module>monster-core-db</module>
     </modules>
 
     <properties>
