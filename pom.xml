@@ -19,6 +19,9 @@
         <module>monster-core-context</module>
         <module>monster-core-db</module>
         <module>monster-core-log4j2</module>
+        <module>monster-core-secure</module>
+        <module>monster-starter-auth</module>
+        <module>monster-starter-jwt</module>
     </modules>
 
     <properties>
