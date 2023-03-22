@@ -18,6 +18,7 @@
         <module>monster-core-cloud</module>
         <module>monster-core-context</module>
         <module>monster-core-db</module>
+        <module>monster-core-log4j2</module>
     </modules>
 
     <properties>
