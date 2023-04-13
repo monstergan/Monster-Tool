@@ -1,7 +1,7 @@
 package com.monster.core.secure.utils;
 
-import com.kte.core.jwt.JwtUtil;
-import com.kte.core.jwt.props.JwtProperties;
+import com.monster.core.jwt.JwtUtil;
+import com.monster.core.jwt.props.JwtProperties;
 import com.monster.core.launch.constant.TokenConstant;
 import com.monster.core.secure.MonsterUser;
 import com.monster.core.tool.constant.RoleConstant;
