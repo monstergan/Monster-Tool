@@ -23,6 +23,7 @@
         <module>monster-starter-auth</module>
         <module>monster-starter-jwt</module>
         <module>monster-starter-cache</module>
+        <module>monster-starter-actuate</module>
     </modules>
 
     <properties>
