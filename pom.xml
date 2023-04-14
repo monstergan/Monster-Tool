@@ -28,6 +28,7 @@
         <module>monster-starter-datascope</module>
         <module>monster-starter-mybatis</module>
         <module>monster-starter-excel</module>
+        <module>monster-starter-http</module>
     </modules>
 
     <properties>
