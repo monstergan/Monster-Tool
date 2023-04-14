@@ -30,6 +30,7 @@
         <module>monster-starter-excel</module>
         <module>monster-starter-http</module>
         <module>monster-starter-log</module>
+        <module>monster-starter-metrics</module>
     </modules>
 
     <properties>
