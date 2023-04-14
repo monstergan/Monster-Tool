@@ -24,6 +24,7 @@
         <module>monster-starter-jwt</module>
         <module>monster-starter-cache</module>
         <module>monster-starter-actuate</module>
+        <module>monster-starter-api-crypto</module>
     </modules>
 
     <properties>
