@@ -1,6 +1,6 @@
 package com.monster.core.cloud.http.logger;
 
-import com.kte.core.launch.log.KteLogLevel;
+import com.monster.core.launch.log.MonsterLogLevel;
 import okhttp3.*;
 import okhttp3.internal.http.HttpHeaders;
 import okio.Buffer;
@@ -20,7 +20,7 @@ import java.util.concurrent.TimeUnit;
 public final class HttpLoggingInterceptor implements Interceptor {
     private static final Charset UTF8 = StandardCharsets.UTF_8;
     private final Logger logger;
-    private volatile KteLogLevel level = KteLogLevel.NONE;
+    private volatile MonsterLogLevel level = MonsterLogLevel.NONE;
 
     public HttpLoggingInterceptor(Logger logger) {
         this.logger = logger;
@@ -51,7 +51,7 @@ public final class HttpLoggingInterceptor implements Interceptor {
         }
     }
 
-    public KteLogLevel getLevel() {
+    public MonsterLogLevel getLevel() {
         return level;
     }
 
@@ -61,22 +61,22 @@ public final class HttpLoggingInterceptor implements Interceptor {
      * @param level log Level
      * @return HttpLoggingInterceptor
      */
-    public HttpLoggingInterceptor setLevel(KteLogLevel level) {
+    public HttpLoggingInterceptor setLevel(MonsterLogLevel level) {
         this.level = Objects.requireNonNull(level, "level == null. Use Level.NONE instead.");
         return this;
     }
 
     @Override
     public Response intercept(Chain chain) throws IOException {
-        KteLogLevel level = this.level;
+        MonsterLogLevel level = this.level;
 
         Request request = chain.request();
-        if (level == KteLogLevel.NONE) {
+        if (level == MonsterLogLevel.NONE) {
             return chain.proceed(request);
         }
 
-        boolean logBody = level == KteLogLevel.BODY;
-        boolean logHeaders = logBody || level == KteLogLevel.HEADERS;
+        boolean logBody = level == MonsterLogLevel.BODY;
+        boolean logHeaders = logBody || level == MonsterLogLevel.HEADERS;
 
         RequestBody requestBody = request.body();
         boolean hasRequestBody = requestBody != null;

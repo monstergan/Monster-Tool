@@ -1,7 +1,7 @@
 package com.monster.core.cloud.hystrix;
 
-import com.kte.core.tool.convert.EnumToStringConverter;
-import com.kte.core.tool.convert.StringToEnumConverter;
+import com.monster.core.tool.convert.EnumToStringConverter;
+import com.monster.core.tool.convert.StringToEnumConverter;
 import com.monster.core.cloud.feign.MonsterFeignRequestInterceptor;
 import com.monster.core.cloud.version.MonsterSpringMvcContract;
 import com.netflix.hystrix.Hystrix;

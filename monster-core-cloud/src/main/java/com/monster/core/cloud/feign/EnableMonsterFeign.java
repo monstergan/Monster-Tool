@@ -1,6 +1,6 @@
 package com.monster.core.cloud.feign;
 
-import com.kte.core.launch.constant.AppConstant;
+import com.monster.core.launch.constant.AppConstant;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 
 import java.lang.annotation.*;

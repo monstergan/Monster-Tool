@@ -21,9 +21,9 @@ import java.util.Objects;
 public class AuthUtil {
     private static final String KTE_USER_REQUEST_ATTR = "_KTE_USER_REQUEST_ATTR_";
 
-    private final static String HEADER = TokenConstant.HEADER;
-    private final static String ACCOUNT = TokenConstant.ACCOUNT;
-    private final static String USER_NAME = TokenConstant.USER_NAME;
+    private static final String HEADER = TokenConstant.HEADER;
+    private static final String ACCOUNT = TokenConstant.ACCOUNT;
+    private static final String USER_NAME = TokenConstant.USER_NAME;
     private final static String NICK_NAME = TokenConstant.NICK_NAME;
     private final static String REAL_NAME = TokenConstant.REAL_NAME;
     private final static String USER_ID = TokenConstant.USER_ID;
