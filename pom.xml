@@ -32,6 +32,7 @@
         <module>monster-starter-log</module>
         <module>monster-starter-metrics</module>
         <module>monster-starter-mongo</module>
+        <module>monster-starter-oss</module>
     </modules>
 
     <properties>
