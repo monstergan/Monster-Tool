@@ -8,42 +8,31 @@
         <artifactId>Monster-Tool</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-    <artifactId>monster-core-boot</artifactId>
+    <artifactId>monster-core-secure</artifactId>
     <name>${project.artifactId}</name>
     <packaging>jar</packaging>
 
     <dependencies>
         <dependency>
             <groupId>com.monster</groupId>
-            <artifactId>monster-core-context</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.kte</groupId>
-            <artifactId>kte-core-db</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.kte</groupId>
-            <artifactId>kte-core-secure</artifactId>
+            <artifactId>monster-starter-auth</artifactId>
+            <version>1.0-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>com.monster</groupId>
-            <artifactId>monster-core-cloud</artifactId>
+            <artifactId>monster-starter-cache</artifactId>
+            <version>1.0-SNAPSHOT</version>
         </dependency>
+        <!--Jdbc-->
         <dependency>
-            <groupId>com.kte</groupId>
-            <artifactId>kte-starter-cache</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.kte</groupId>
-            <artifactId>kte-starter-redis</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.kte</groupId>
-            <artifactId>kte-starter-log</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.kte</groupId>
-            <artifactId>kte-starter-mybatis</artifactId>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-jdbc</artifactId>
+            <exclusions>
+                <exclusion>
+                    <artifactId>tomcat-jdbc</artifactId>
+                    <groupId>org.apache.tomcat</groupId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>com.monster</groupId>
@@ -51,4 +40,5 @@
             <scope>provided</scope>
         </dependency>
     </dependencies>
+
 </project>

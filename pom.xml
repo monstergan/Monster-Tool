@@ -15,6 +15,16 @@
         <module>monster-core-boot</module>
         <module>monster-core-tool</module>
         <module>monster-core-launch</module>
+        <module>monster-core-cloud</module>
+        <module>monster-core-context</module>
+        <module>monster-core-db</module>
+        <module>monster-core-log4j2</module>
+        <module>monster-core-secure</module>
+        <module>monster-starter-auth</module>
+        <module>monster-starter-jwt</module>
+        <module>monster-starter-cache</module>
+        <module>monster-starter-actuate</module>
+        <module>monster-starter-api-crypto</module>
     </modules>
 
     <properties>
@@ -25,8 +35,6 @@
         <spring.boot.version>2.3.12.RELEASE</spring.boot.version>
         <spring.cloud.version>Hoxton.SR12</spring.cloud.version>
         <spring.platform.version>Cairo-SR8</spring.platform.version>
-        <maven.compiler.source>8</maven.compiler.source>
-        <maven.compiler.target>8</maven.compiler.target>
     </properties>
 
     <dependencyManagement>
