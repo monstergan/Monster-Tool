@@ -35,6 +35,7 @@
         <module>monster-starter-oss</module>
         <module>monster-starter-prometheus</module>
         <module>monster-starter-redis</module>
+        <module>monster-starter-ribbon</module>
     </modules>
 
     <properties>
