@@ -33,6 +33,7 @@
         <module>monster-starter-metrics</module>
         <module>monster-starter-mongo</module>
         <module>monster-starter-oss</module>
+        <module>monster-starter-prometheus</module>
     </modules>
 
     <properties>
