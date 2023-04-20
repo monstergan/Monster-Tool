@@ -34,6 +34,7 @@
         <module>monster-starter-mongo</module>
         <module>monster-starter-oss</module>
         <module>monster-starter-prometheus</module>
+        <module>monster-starter-redis</module>
     </modules>
 
     <properties>
