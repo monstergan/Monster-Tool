@@ -36,6 +36,7 @@
         <module>monster-starter-prometheus</module>
         <module>monster-starter-redis</module>
         <module>monster-starter-ribbon</module>
+        <module>monster-starter-sms</module>
     </modules>
 
     <properties>
