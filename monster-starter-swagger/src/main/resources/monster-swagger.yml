@@ -1,0 +1,11 @@
+#swagger公共信息
+swagger:
+  title: 接口文档系统
+  description:  接口文档系统
+  license: Powered By 123
+  license-url: https://test.com
+  terms-of-service-url: https://test.com
+  contact:
+    name: monster
+    email: 1107743923@qq.com
+    url: https://test.com

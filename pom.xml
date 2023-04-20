@@ -38,6 +38,7 @@
         <module>monster-starter-ribbon</module>
         <module>monster-starter-sms</module>
         <module>monster-starter-social</module>
+        <module>monster-starter-swagger</module>
     </modules>
 
     <properties>
