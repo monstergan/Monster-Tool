@@ -37,6 +37,7 @@
         <module>monster-starter-redis</module>
         <module>monster-starter-ribbon</module>
         <module>monster-starter-sms</module>
+        <module>monster-starter-social</module>
     </modules>
 
     <properties>
