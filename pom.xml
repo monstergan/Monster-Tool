@@ -25,6 +25,7 @@
         <module>monster-starter-cache</module>
         <module>monster-starter-actuate</module>
         <module>monster-starter-api-crypto</module>
+        <module>monster-starter-log</module>
     </modules>
 
     <properties>
