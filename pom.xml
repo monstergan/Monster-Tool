@@ -39,6 +39,7 @@
         <module>monster-starter-sms</module>
         <module>monster-starter-social</module>
         <module>monster-starter-swagger</module>
+        <module>monster-starter-tenant</module>
     </modules>
 
     <properties>
