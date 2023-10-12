@@ -1,7 +1,7 @@
 package com.monster.core.cloud.http;
 
-import com.kte.core.tool.constant.KteConstant;
-import com.kte.core.tool.utils.ThreadLocalUtil;
+import com.monster.core.tool.constant.MonsterConstant;
+import com.monster.core.tool.utils.ThreadLocalUtil;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpRequest;
@@ -22,7 +22,7 @@ public class RestTemplateHeaderInterceptor implements ClientHttpRequestIntercept
     @NonNull
     @Override
     public ClientHttpResponse intercept(@NonNull HttpRequest request, @NonNull byte[] bytes, @NonNull ClientHttpRequestExecution execution) throws IOException {
-        HttpHeaders headers = ThreadLocalUtil.get(KteConstant.CONTEXT_KEY);
+        HttpHeaders headers = ThreadLocalUtil.get(MonsterConstant.CONTEXT_KEY);
         if (headers != null && !headers.isEmpty()) {
             HttpHeaders httpHeaders = request.getHeaders();
             headers.forEach((key, values) -> values.forEach(value -> httpHeaders.add(key, value)));

@@ -2,8 +2,8 @@ package com.monster.core.cloud.version;
 
 import com.monster.core.cloud.annotation.ApiVersion;
 import com.monster.core.cloud.annotation.UrlVersion;
-import com.kte.core.tool.utils.StringPool;
-import com.kte.core.tool.utils.StringUtil;
+import com.monster.core.tool.utils.StringPool;
+import com.monster.core.tool.utils.StringUtil;
 import feign.MethodMetadata;
 import org.springframework.cloud.openfeign.AnnotatedParameterProcessor;
 import org.springframework.cloud.openfeign.support.SpringMvcContract;

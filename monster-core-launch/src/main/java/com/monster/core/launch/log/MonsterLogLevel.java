@@ -12,7 +12,7 @@ import lombok.RequiredArgsConstructor;
  */
 @Getter
 @RequiredArgsConstructor
-public enum KteLogLevel {
+public enum MonsterLogLevel {
 
     /**
      * No logs.
@@ -76,11 +76,11 @@ public enum KteLogLevel {
     /**
      * 请求日志配置前缀
      */
-    public static final String REQ_LOG_PROPS_PREFIX = "kte.log.request";
+    public static final String REQ_LOG_PROPS_PREFIX = "monster.log.request";
     /**
      * 控制台日志是否启用
      */
-    public static final String CONSOLE_LOG_ENABLED_PROP = "kte.log.console.enabled";
+    public static final String CONSOLE_LOG_ENABLED_PROP = "monster.log.console.enabled";
 
     /**
      * 级别
@@ -93,7 +93,7 @@ public enum KteLogLevel {
      * @param level LogLevel
      * @return 是否小于和等于
      */
-    public boolean lte(KteLogLevel level) {
+    public boolean lte(MonsterLogLevel level) {
         return this.level <= level.level;
     }
 

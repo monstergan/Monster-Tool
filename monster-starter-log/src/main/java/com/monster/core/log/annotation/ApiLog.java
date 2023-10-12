@@ -10,10 +10,10 @@ import java.lang.annotation.*;
 @Documented
 public @interface ApiLog {
 
-	/**
-	 * 日志描述
-	 *
-	 * @return {String}
-	 */
-	String value() default "日志记录";
+    /**
+     * 日志描述
+     *
+     * @return {String}
+     */
+    String value() default "日志记录";
 }

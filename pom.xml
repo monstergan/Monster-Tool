@@ -25,7 +25,23 @@
         <module>monster-starter-cache</module>
         <module>monster-starter-actuate</module>
         <module>monster-starter-api-crypto</module>
+        <module>monster-starter-datascope</module>
+        <module>monster-starter-mybatis</module>
+        <module>monster-starter-excel</module>
+        <module>monster-starter-http</module>
         <module>monster-starter-log</module>
+        <module>monster-starter-metrics</module>
+        <module>monster-starter-mongo</module>
+        <module>monster-starter-oss</module>
+        <module>monster-starter-prometheus</module>
+        <module>monster-starter-redis</module>
+        <module>monster-starter-ribbon</module>
+        <module>monster-starter-sms</module>
+        <module>monster-starter-social</module>
+        <module>monster-starter-swagger</module>
+        <module>monster-starter-tenant</module>
+        <module>monster-starter-trace</module>
+        <module>monster-starter-transaction</module>
     </modules>
 
     <properties>

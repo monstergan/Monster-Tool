@@ -1,6 +1,6 @@
 package com.monster.core.cloud.client;
 
-import com.kte.core.launch.constant.AppConstant;
+import com.monster.core.launch.constant.AppConstant;
 import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;

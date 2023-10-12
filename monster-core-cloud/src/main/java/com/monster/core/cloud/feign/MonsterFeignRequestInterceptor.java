@@ -1,7 +1,7 @@
 package com.monster.core.cloud.feign;
 
-import com.kte.core.tool.constant.KteConstant;
-import com.kte.core.tool.utils.ThreadLocalUtil;
+import com.monster.core.tool.constant.MonsterConstant;
+import com.monster.core.tool.utils.ThreadLocalUtil;
 import feign.RequestInterceptor;
 import feign.RequestTemplate;
 import org.springframework.http.HttpHeaders;
@@ -13,7 +13,7 @@ import org.springframework.http.HttpHeaders;
 public class MonsterFeignRequestInterceptor implements RequestInterceptor {
     @Override
     public void apply(RequestTemplate requestTemplate) {
-        HttpHeaders headers = ThreadLocalUtil.get(KteConstant.CONTEXT_KEY);
+        HttpHeaders headers = ThreadLocalUtil.get(MonsterConstant.CONTEXT_KEY);
         if (headers != null && !headers.isEmpty()) {
             headers.forEach((key, values) ->
                     values.forEach(value -> requestTemplate.header(key, value))

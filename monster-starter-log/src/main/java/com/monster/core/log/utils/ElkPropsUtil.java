@@ -1,5 +1,6 @@
 package com.monster.core.log.utils;
 
+
 import com.monster.core.tool.utils.StringPool;
 
 import java.util.Properties;

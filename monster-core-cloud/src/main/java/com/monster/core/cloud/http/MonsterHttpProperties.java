@@ -1,6 +1,6 @@
 package com.monster.core.cloud.http;
 
-import com.kte.core.launch.log.KteLogLevel;
+import com.monster.core.launch.log.MonsterLogLevel;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.boot.context.properties.ConfigurationProperties;
@@ -14,7 +14,7 @@ import java.util.concurrent.TimeUnit;
 @Getter
 @Setter
 @RefreshScope
-@ConfigurationProperties("kte.http")
+@ConfigurationProperties("monster.http")
 public class MonsterHttpProperties {
     /**
      * 最大连接数，默认：200
@@ -43,5 +43,5 @@ public class MonsterHttpProperties {
     /**
      * 日志级别
      */
-    private KteLogLevel level = KteLogLevel.NONE;
+    private MonsterLogLevel level = MonsterLogLevel.NONE;
 }

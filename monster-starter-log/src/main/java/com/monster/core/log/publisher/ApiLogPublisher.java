@@ -6,9 +6,9 @@ import com.monster.core.log.constant.EventConstant;
 import com.monster.core.log.event.ApiLogEvent;
 import com.monster.core.log.model.LogApi;
 import com.monster.core.log.utils.LogAbstractUtil;
-import com.kte.core.tool.constant.KteConstant;
-import com.kte.core.tool.utils.SpringUtil;
-import com.kte.core.tool.utils.WebUtil;
+import com.monster.core.tool.constant.MonsterConstant;
+import com.monster.core.tool.utils.SpringUtil;
+import com.monster.core.tool.utils.WebUtil;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
@@ -22,7 +22,7 @@ public class ApiLogPublisher {
 	public static void publishEvent(String methodName, String methodClass, ApiLog apiLog, long time) {
 		HttpServletRequest request = WebUtil.getRequest();
 		LogApi logApi = new LogApi();
-		logApi.setType(KteConstant.LOG_NORMAL_TYPE);
+		logApi.setType(MonsterConstant.LOG_NORMAL_TYPE);
 		logApi.setTitle(apiLog.value());
 		logApi.setTime(String.valueOf(time));
 		logApi.setMethodClass(methodClass);

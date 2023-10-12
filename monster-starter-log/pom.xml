@@ -8,6 +8,7 @@
         <artifactId>Monster-Tool</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
+
     <artifactId>monster-starter-log</artifactId>
     <name>${project.artifactId}</name>
     <packaging>jar</packaging>
@@ -17,7 +18,6 @@
             <groupId>com.monster</groupId>
             <artifactId>monster-core-cloud</artifactId>
         </dependency>
-        <!-- mybatis -->
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus</artifactId>
@@ -28,18 +28,13 @@
         </dependency>
         <!-- validator -->
         <dependency>
-            <groupId>org.hibernate.validator</groupId>
             <artifactId>hibernate-validator</artifactId>
+            <groupId>org.hibernate.validator</groupId>
         </dependency>
         <dependency>
             <groupId>com.monster</groupId>
             <artifactId>monster-core-auto</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.monster</groupId>
-            <artifactId>monster-starter-auth</artifactId>
-            <version>1.0-SNAPSHOT</version>
-            <scope>compile</scope>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 </project>
