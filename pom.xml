@@ -41,6 +41,7 @@
         <module>monster-starter-swagger</module>
         <module>monster-starter-tenant</module>
         <module>monster-starter-trace</module>
+        <module>monster-starter-transaction</module>
     </modules>
 
     <properties>
