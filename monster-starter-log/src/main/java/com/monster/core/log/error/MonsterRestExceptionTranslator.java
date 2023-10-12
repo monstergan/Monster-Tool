@@ -1,15 +1,15 @@
 package com.monster.core.log.error;
 
-import com.kte.core.log.exception.InternalServerException;
-import com.kte.core.log.exception.ServiceException;
-import com.kte.core.log.props.KteRequestLogProperties;
-import com.kte.core.log.publisher.ErrorLogPublisher;
-import com.kte.core.secure.exception.SecureException;
-import com.kte.core.tool.api.R;
-import com.kte.core.tool.api.ResultCode;
-import com.kte.core.tool.utils.Func;
-import com.kte.core.tool.utils.UrlUtil;
-import com.kte.core.tool.utils.WebUtil;
+import com.monster.core.log.exception.InternalServerException;
+import com.monster.core.log.exception.ServiceException;
+import com.monster.core.log.props.MonsterRequestLogProperties;
+import com.monster.core.log.publisher.ErrorLogPublisher;
+import com.monster.core.secure.exception.SecureException;
+import com.monster.core.tool.api.R;
+import com.monster.core.tool.api.ResultCode;
+import com.monster.core.tool.utils.Func;
+import com.monster.core.tool.utils.UrlUtil;
+import com.monster.core.tool.utils.WebUtil;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
@@ -36,7 +36,7 @@ import javax.servlet.Servlet;
 @RestControllerAdvice
 public class MonsterRestExceptionTranslator {
 
-	private final KteRequestLogProperties properties;
+	private final MonsterRequestLogProperties properties;
 
 	@ExceptionHandler(ServiceException.class)
 	@ResponseStatus(HttpStatus.BAD_REQUEST)

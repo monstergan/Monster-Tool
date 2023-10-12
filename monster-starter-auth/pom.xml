@@ -13,16 +13,15 @@
     <name>${project.artifactId}</name>
     <packaging>jar</packaging>
 
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>com.monster</groupId>
-                <artifactId>monster-core-tool</artifactId>
-            </dependency>
-            <dependency>
-                <groupId>com.monster</groupId>
-                <artifactId>monster-starter-jwt</artifactId>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
+    <dependencies>
+        <dependency>
+            <groupId>com.monster</groupId>
+            <artifactId>monster-core-tool</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.monster</groupId>
+            <artifactId>monster-starter-jwt</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 </project>

@@ -1,6 +1,6 @@
 package com.monster.core.log.props;
 
-import com.monster.core.launch.log.KteLogLevel;
+import com.monster.core.launch.log.MonsterLogLevel;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.boot.context.properties.ConfigurationProperties;
@@ -12,7 +12,7 @@ import org.springframework.cloud.context.config.annotation.RefreshScope;
 @Getter
 @Setter
 @RefreshScope
-@ConfigurationProperties(KteLogLevel.REQ_LOG_PROPS_PREFIX)
+@ConfigurationProperties(MonsterLogLevel.REQ_LOG_PROPS_PREFIX)
 public class MonsterRequestLogProperties {
 
 	/**
@@ -29,5 +29,5 @@ public class MonsterRequestLogProperties {
 	/**
 	 * 日志级别配置，默认：BODY
 	 */
-	private KteLogLevel level = KteLogLevel.BODY;
+	private MonsterLogLevel level = MonsterLogLevel.BODY;
 }

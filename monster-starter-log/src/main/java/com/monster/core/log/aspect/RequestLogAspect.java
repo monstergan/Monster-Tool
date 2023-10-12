@@ -1,12 +1,12 @@
 package com.monster.core.log.aspect;
 
-import com.kte.core.launch.log.KteLogLevel;
-import com.kte.core.log.props.KteRequestLogProperties;
-import com.kte.core.tool.jackson.JsonUtil;
-import com.kte.core.tool.utils.ClassUtil;
-import com.kte.core.tool.utils.StringPool;
-import com.kte.core.tool.utils.StringUtil;
-import com.kte.core.tool.utils.WebUtil;
+import com.monster.core.launch.log.MonsterLogLevel;
+import com.monster.core.log.props.MonsterRequestLogProperties;
+import com.monster.core.tool.jackson.JsonUtil;
+import com.monster.core.tool.utils.ClassUtil;
+import com.monster.core.tool.utils.StringPool;
+import com.monster.core.tool.utils.StringUtil;
+import com.monster.core.tool.utils.WebUtil;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.ProceedingJoinPoint;
@@ -40,10 +40,10 @@ import java.util.concurrent.atomic.AtomicBoolean;
 @Configuration(proxyBeanMethods = false)
 @AllArgsConstructor
 @ConditionalOnWebApplication(type = ConditionalOnWebApplication.Type.SERVLET)
-@ConditionalOnProperty(value = KteLogLevel.REQ_LOG_PROPS_PREFIX + ".enabled", havingValue = "true", matchIfMissing = true)
+@ConditionalOnProperty(value = MonsterLogLevel.REQ_LOG_PROPS_PREFIX + ".enabled", havingValue = "true", matchIfMissing = true)
 public class RequestLogAspect {
 
-	private final KteRequestLogProperties properties;
+	private final MonsterRequestLogProperties properties;
 
 	/**
 	 * AOP 环切 控制器 R 返回值
@@ -53,14 +53,14 @@ public class RequestLogAspect {
 	 * @throws Throwable 异常
 	 */
 	@Around(
-		"execution(!static com.kte.core.tool.api.R *(..)) && " +
+		"execution(!static com.monster.core.tool.api.R *(..)) && " +
 			"(@within(org.springframework.stereotype.Controller) || " +
 			"@within(org.springframework.web.bind.annotation.RestController))"
 	)
 	public Object aroundApi(ProceedingJoinPoint point) throws Throwable {
-		KteLogLevel level = properties.getLevel();
+		MonsterLogLevel level = properties.getLevel();
 		// 不打印日志，直接返回
-		if (KteLogLevel.NONE == level) {
+		if (MonsterLogLevel.NONE == level) {
 			return point.proceed();
 		}
 		HttpServletRequest request = WebUtil.getRequest();
@@ -93,7 +93,7 @@ public class RequestLogAspect {
 		try {
 			Object result = point.proceed();
 			// 打印返回结构体
-			if (KteLogLevel.BODY.lte(level)) {
+			if (MonsterLogLevel.BODY.lte(level)) {
 				afterReqLog.append("===Result===  {}\n");
 				afterReqArgs.add(JsonUtil.toJson(result));
 			}
@@ -224,10 +224,10 @@ public class RequestLogAspect {
 	 * @param beforeReqLog  StringBuilder
 	 * @param beforeReqArgs beforeReqArgs
 	 */
-	public void logIngHeaders(HttpServletRequest request, KteLogLevel level,
+	public void logIngHeaders(HttpServletRequest request, MonsterLogLevel level,
 							  StringBuilder beforeReqLog, List<Object> beforeReqArgs) {
 		// 打印请求头
-		if (KteLogLevel.HEADERS.lte(level)) {
+		if (MonsterLogLevel.HEADERS.lte(level)) {
 			Enumeration<String> headers = request.getHeaderNames();
 			while (headers.hasMoreElements()) {
 				String headerName = headers.nextElement();

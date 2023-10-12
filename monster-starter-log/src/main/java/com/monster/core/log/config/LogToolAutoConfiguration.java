@@ -1,6 +1,6 @@
 package com.monster.core.log.config;
 
-import com.kte.core.launch.props.KteProperties;
+import com.monster.core.launch.props.MonsterProperties;
 import com.monster.core.launch.server.ServerInfo;
 import com.monster.core.log.aspect.ApiLogAspect;
 import com.monster.core.log.aspect.LogTraceAspect;
@@ -57,20 +57,20 @@ public class LogToolAutoConfiguration {
 
 	@Bean
 	@ConditionalOnMissingBean(name = "apiLogListener")
-	public ApiLogListener apiLogListener(ILogClient logService, ServerInfo serverInfo, KteProperties kteProperties) {
-		return new ApiLogListener(logService, serverInfo, kteProperties);
+	public ApiLogListener apiLogListener(ILogClient logService, ServerInfo serverInfo, MonsterProperties monsterProperties) {
+		return new ApiLogListener(logService, serverInfo, monsterProperties);
 	}
 
 	@Bean
 	@ConditionalOnMissingBean(name = "errorEventListener")
-	public ErrorLogListener errorEventListener(ILogClient logService, ServerInfo serverInfo, KteProperties kteProperties) {
-		return new ErrorLogListener(logService, serverInfo, kteProperties);
+	public ErrorLogListener errorEventListener(ILogClient logService, ServerInfo serverInfo, MonsterProperties monsterProperties) {
+		return new ErrorLogListener(logService, serverInfo, monsterProperties);
 	}
 
 	@Bean
 	@ConditionalOnMissingBean(name = "usualEventListener")
-	public UsualLogListener usualEventListener(ILogClient logService, ServerInfo serverInfo, KteProperties kteProperties) {
-		return new UsualLogListener(logService, serverInfo, kteProperties);
+	public UsualLogListener usualEventListener(ILogClient logService, ServerInfo serverInfo, MonsterProperties monsterProperties) {
+		return new UsualLogListener(logService, serverInfo, monsterProperties);
 	}
 
 }

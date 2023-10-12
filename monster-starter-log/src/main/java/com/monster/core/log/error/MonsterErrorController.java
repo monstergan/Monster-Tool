@@ -1,6 +1,6 @@
 package com.monster.core.log.error;
 
-import com.kte.core.tool.jackson.JsonUtil;
+import com.monster.core.tool.jackson.JsonUtil;
 import org.springframework.boot.autoconfigure.web.ErrorProperties;
 import org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController;
 import org.springframework.boot.web.servlet.error.ErrorAttributes;

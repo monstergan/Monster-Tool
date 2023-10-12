@@ -1,7 +1,7 @@
 package com.monster.core.log.exception;
 
-import com.kte.core.tool.api.IResultCode;
-import com.kte.core.tool.api.ResultCode;
+import com.monster.core.tool.api.IResultCode;
+import com.monster.core.tool.api.ResultCode;
 import lombok.Getter;
 
 

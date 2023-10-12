@@ -11,29 +11,27 @@
     <artifactId>monster-starter-jwt</artifactId>
     <name>${project.artifactId}</name>
     <packaging>jar</packaging>
-<dependencyManagement>
 
-  <dependencies>
-      <!-- Redis -->
-      <dependency>
-          <groupId>org.springframework.boot</groupId>
-          <artifactId>spring-boot-starter-data-redis</artifactId>
-      </dependency>
-      <!-- JWT -->
-      <dependency>
-          <groupId>io.jsonwebtoken</groupId>
-          <artifactId>jjwt-impl</artifactId>
-      </dependency>
-      <dependency>
-          <groupId>io.jsonwebtoken</groupId>
-          <artifactId>jjwt-jackson</artifactId>
-      </dependency>
-      <dependency>
-          <groupId>com.monster</groupId>
-          <artifactId>monster-core-auto</artifactId>
-          <scope>provided</scope>
-      </dependency>
-  </dependencies>
-</dependencyManagement>
+    <dependencies>
+        <!-- Redis -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
+        <!-- JWT -->
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt-impl</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt-jackson</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.monster</groupId>
+            <artifactId>monster-core-auto</artifactId>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
 
 </project>
